@@ -66,12 +66,14 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 /*CSS for home page*/
+
+/*Device = Desktops ..... Screen size greater than 800px*/
 .container {
 	margin: 0 auto;
 	width: 66%;
 }
 
-nav {
+.navigator {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,8 +81,17 @@ nav {
     margin: 15px 0;
 }
 
+nav {
+    display: flex;
+    width: 70%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav a {
-	text-decoration: none;
+    text-decoration: none;
+    color: black;
 }
 
 .innovation {
@@ -97,8 +108,11 @@ h1 {
 	margin-bottom: 10px;
 }
 header div button {
+    width: 150px;
 	text-align: center;
-	margin-left: 100px;
+    margin-left: 70px;
+    border: 1.4px solid black;
+    background: white;
 }
 
 .top_section {
@@ -139,3 +153,100 @@ footer p {
 	 margin-top: 50px;
 }
 
+/* tablet css */
+
+@media (max-width: 800px) {
+
+    .container {
+        margin: 0 auto;
+        width: 92%;
+    } 
+
+    .navigator {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 15px 0;
+    }
+     
+     nav {
+        width: 80%;
+        align-items: flex-end
+    }
+
+     .logo {
+         align-items: flex-start;
+         margin-bottom: 20px;
+     }
+     
+     header.innovation img.header-img {
+         display: none;
+     }
+
+     
+    .innovation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+    }
+   
+    .middle-img {
+        margin: 20px 0;
+        width: 100%;
+    }
+}
+
+/* mobile css */
+
+@media (max-width: 500px) {
+
+    .container {
+        margin: 0 auto;
+        width: 100%;
+    } 
+
+    .navigator {
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 15px 0;
+    }
+     
+     nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+
+    
+    nav a {
+        text-decoration: none;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid lightgray;
+        border-top: 1px solid lightgray;
+    }
+
+     .logo {
+         align-items: flex-start;
+         margin-bottom: 20px;
+     }
+    header.innovation img.header-imag {
+        display: none;
+    }
+
+    .innovation {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    
+}
